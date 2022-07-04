@@ -49,4 +49,11 @@ class SchoolViewModel {
         cell.websiteLabel.attributedText = NSMutableAttributedString()
                 .normal("\(school.website)")
     }
+    
+    func getSchoolAt(_ indexPath: IndexPath) -> School? {
+        if schools.count > indexPath.row {
+            return schools[indexPath.row]
+        }
+        return nil
+    }
 }

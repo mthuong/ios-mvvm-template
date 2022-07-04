@@ -24,6 +24,8 @@
 		031E0A94287250D400962CE5 /* SchoolListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E0A93287250D400962CE5 /* SchoolListViewController.swift */; };
 		031E0A972872518500962CE5 /* SchoolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E0A962872518500962CE5 /* SchoolCell.swift */; };
 		031E0A9A28725D8700962CE5 /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E0A9928725D8700962CE5 /* NSMutableAttributedString+Extension.swift */; };
+		03C21AA628729327001BC23E /* SchoolDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C21AA528729327001BC23E /* SchoolDetailViewController.swift */; };
+		03C21AA82872937D001BC23E /* SchoolDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C21AA72872937D001BC23E /* SchoolDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		031E0A93287250D400962CE5 /* SchoolListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListViewController.swift; sourceTree = "<group>"; };
 		031E0A962872518500962CE5 /* SchoolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCell.swift; sourceTree = "<group>"; };
 		031E0A9928725D8700962CE5 /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		03C21AA528729327001BC23E /* SchoolDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailViewController.swift; sourceTree = "<group>"; };
+		03C21AA72872937D001BC23E /* SchoolDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				031E0A8F287250AB00962CE5 /* SchoolViewModel.swift */,
+				03C21AA72872937D001BC23E /* SchoolDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 		031E0A952872510F00962CE5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				03C21AA428729317001BC23E /* SchoolDetail */,
 				031E0A92287250C400962CE5 /* SchoolList */,
 			);
 			path = ViewControllers;
@@ -205,6 +211,14 @@
 				031E0A9928725D8700962CE5 /* NSMutableAttributedString+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		03C21AA428729317001BC23E /* SchoolDetail */ = {
+			isa = PBXGroup;
+			children = (
+				03C21AA528729327001BC23E /* SchoolDetailViewController.swift */,
+			);
+			path = SchoolDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +358,8 @@
 				031E0A592872463300962CE5 /* ViewController.swift in Sources */,
 				031E0A552872463300962CE5 /* AppDelegate.swift in Sources */,
 				031E0A572872463300962CE5 /* SceneDelegate.swift in Sources */,
+				03C21AA82872937D001BC23E /* SchoolDetailViewModel.swift in Sources */,
+				03C21AA628729327001BC23E /* SchoolDetailViewController.swift in Sources */,
 				031E0A9A28725D8700962CE5 /* NSMutableAttributedString+Extension.swift in Sources */,
 				031E0A90287250AB00962CE5 /* SchoolViewModel.swift in Sources */,
 				031E0A8B28724AF800962CE5 /* SchoolAPIServiceProtocol.swift in Sources */,

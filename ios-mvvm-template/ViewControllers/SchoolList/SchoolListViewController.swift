@@ -97,4 +97,14 @@ extension SchoolListViewController: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        // TODO: Fixme by using coordinator
+        // Start coordinator to detail screen
+        let school = viewModel.getSchoolAt(indexPath)
+        let vc = SchoolDetailViewController(viewModel: SchoolDetailViewModel(school: school))
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

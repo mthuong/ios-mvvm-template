@@ -17,6 +17,7 @@ struct EndPoint {
 }
 
 struct SchoolAPIService : SchoolAPIServiceProtocol {
+    
     private let sessionManager: URLSession = {
         let configuration = URLSessionConfiguration.default
         return URLSession(configuration: configuration, delegate: nil, delegateQueue: nil)
@@ -45,6 +46,37 @@ struct SchoolAPIService : SchoolAPIServiceProtocol {
                 completion(true, response, nil)
             } else {
                 completion(true, [], nil)
+            }
+        }.resume()
+    }
+    
+    func fetchSchoolDetails(schoolId: String, completion: @escaping (Bool, SchoolDetail?, Error?) -> Void) {
+        guard let url = createURLFromPath("f9bf-2cp4.json", parameters: ["dbn": schoolId]) else {
+            completion(false, nil, apiError(errorId: 401, description: "Invalid Url", errorKind: .invalidUrl))
+            return
+        }
+        
+        
+        let request = URLRequest(url: url)
+        sessionManager.dataTask(with: request) { (data, response, error) in
+            
+            //Handle error case
+            guard error == nil else {
+                completion(false, nil, apiError(errorId: 501, description: error?.localizedDescription,errorKind: .serverError))
+                return
+            }
+            
+            guard let data = data else {
+                completion(true, nil, nil)
+                return
+            }
+            
+            let response = try? JSONDecoder().decode([SchoolDetail].self, from: data)
+            
+            if let response = response, !response.isEmpty {
+                completion(true, response.first, nil)
+            } else {
+                completion(true, nil, nil)
             }
         }.resume()
     }
