@@ -16,6 +16,14 @@
 		031E0A6C2872463500962CE5 /* ios_mvvm_templateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E0A6B2872463500962CE5 /* ios_mvvm_templateTests.swift */; };
 		031E0A762872463500962CE5 /* ios_mvvm_templateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E0A752872463500962CE5 /* ios_mvvm_templateUITests.swift */; };
 		031E0A782872463500962CE5 /* ios_mvvm_templateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E0A772872463500962CE5 /* ios_mvvm_templateUITestsLaunchTests.swift */; };
+		031E0A86287248AD00962CE5 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E0A85287248AD00962CE5 /* School.swift */; };
+		031E0A8828724A9000962CE5 /* SchoolDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E0A8728724A9000962CE5 /* SchoolDetail.swift */; };
+		031E0A8B28724AF800962CE5 /* SchoolAPIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E0A8A28724AF800962CE5 /* SchoolAPIServiceProtocol.swift */; };
+		031E0A8D28724BFF00962CE5 /* SchoolAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E0A8C28724BFF00962CE5 /* SchoolAPIService.swift */; };
+		031E0A90287250AB00962CE5 /* SchoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E0A8F287250AB00962CE5 /* SchoolViewModel.swift */; };
+		031E0A94287250D400962CE5 /* SchoolListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E0A93287250D400962CE5 /* SchoolListViewController.swift */; };
+		031E0A972872518500962CE5 /* SchoolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E0A962872518500962CE5 /* SchoolCell.swift */; };
+		031E0A9A28725D8700962CE5 /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E0A9928725D8700962CE5 /* NSMutableAttributedString+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		031E0A712872463500962CE5 /* ios-mvvm-templateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-mvvm-templateUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		031E0A752872463500962CE5 /* ios_mvvm_templateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_mvvm_templateUITests.swift; sourceTree = "<group>"; };
 		031E0A772872463500962CE5 /* ios_mvvm_templateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_mvvm_templateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		031E0A85287248AD00962CE5 /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		031E0A8728724A9000962CE5 /* SchoolDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetail.swift; sourceTree = "<group>"; };
+		031E0A8A28724AF800962CE5 /* SchoolAPIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolAPIServiceProtocol.swift; sourceTree = "<group>"; };
+		031E0A8C28724BFF00962CE5 /* SchoolAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolAPIService.swift; sourceTree = "<group>"; };
+		031E0A8F287250AB00962CE5 /* SchoolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolViewModel.swift; sourceTree = "<group>"; };
+		031E0A93287250D400962CE5 /* SchoolListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListViewController.swift; sourceTree = "<group>"; };
+		031E0A962872518500962CE5 /* SchoolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCell.swift; sourceTree = "<group>"; };
+		031E0A9928725D8700962CE5 /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,12 @@
 		031E0A532872463300962CE5 /* ios-mvvm-template */ = {
 			isa = PBXGroup;
 			children = (
+				031E0A9828725D7100962CE5 /* Extensions */,
+				031E0A952872510F00962CE5 /* ViewControllers */,
+				031E0A91287250B700962CE5 /* Views */,
+				031E0A8E2872508A00962CE5 /* ViewModel */,
+				031E0A8928724AA600962CE5 /* Service */,
+				031E0A842872467B00962CE5 /* Model */,
 				031E0A542872463300962CE5 /* AppDelegate.swift */,
 				031E0A562872463300962CE5 /* SceneDelegate.swift */,
 				031E0A582872463300962CE5 /* ViewController.swift */,
@@ -125,6 +147,64 @@
 				031E0A772872463500962CE5 /* ios_mvvm_templateUITestsLaunchTests.swift */,
 			);
 			path = "ios-mvvm-templateUITests";
+			sourceTree = "<group>";
+		};
+		031E0A842872467B00962CE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				031E0A85287248AD00962CE5 /* School.swift */,
+				031E0A8728724A9000962CE5 /* SchoolDetail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		031E0A8928724AA600962CE5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				031E0A8A28724AF800962CE5 /* SchoolAPIServiceProtocol.swift */,
+				031E0A8C28724BFF00962CE5 /* SchoolAPIService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		031E0A8E2872508A00962CE5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				031E0A8F287250AB00962CE5 /* SchoolViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		031E0A91287250B700962CE5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				031E0A962872518500962CE5 /* SchoolCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		031E0A92287250C400962CE5 /* SchoolList */ = {
+			isa = PBXGroup;
+			children = (
+				031E0A93287250D400962CE5 /* SchoolListViewController.swift */,
+			);
+			path = SchoolList;
+			sourceTree = "<group>";
+		};
+		031E0A952872510F00962CE5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				031E0A92287250C400962CE5 /* SchoolList */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		031E0A9828725D7100962CE5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				031E0A9928725D8700962CE5 /* NSMutableAttributedString+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +338,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				031E0A8828724A9000962CE5 /* SchoolDetail.swift in Sources */,
+				031E0A972872518500962CE5 /* SchoolCell.swift in Sources */,
+				031E0A94287250D400962CE5 /* SchoolListViewController.swift in Sources */,
 				031E0A592872463300962CE5 /* ViewController.swift in Sources */,
 				031E0A552872463300962CE5 /* AppDelegate.swift in Sources */,
 				031E0A572872463300962CE5 /* SceneDelegate.swift in Sources */,
+				031E0A9A28725D8700962CE5 /* NSMutableAttributedString+Extension.swift in Sources */,
+				031E0A90287250AB00962CE5 /* SchoolViewModel.swift in Sources */,
+				031E0A8B28724AF800962CE5 /* SchoolAPIServiceProtocol.swift in Sources */,
+				031E0A8D28724BFF00962CE5 /* SchoolAPIService.swift in Sources */,
+				031E0A86287248AD00962CE5 /* School.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
