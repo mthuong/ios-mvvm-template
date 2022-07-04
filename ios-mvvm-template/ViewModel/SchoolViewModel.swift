@@ -14,8 +14,11 @@ class SchoolViewModel {
     
     var schools: [School] = [School]()
     
-    init(schoolApiService: SchoolAPIServiceProtocol = SchoolAPIService()) {
+    private let coordinator: SchoolListCoordinator
+    
+    init(schoolApiService: SchoolAPIServiceProtocol = SchoolAPIService(), coordinator: SchoolListCoordinator) {
         self.schoolApiService = schoolApiService
+        self.coordinator = coordinator
     }
     
     func fetchSchools(completion: @escaping(_ success: Bool, _ error: Error?) -> Void) -> Void {
@@ -55,5 +58,11 @@ class SchoolViewModel {
             return schools[indexPath.row]
         }
         return nil
+    }
+    
+    func showSchoolDetails(_ indexPath: IndexPath) -> Void {
+        // Show details
+        let school = getSchoolAt(indexPath)
+        coordinator.showSchoolDetail(school)
     }
 }

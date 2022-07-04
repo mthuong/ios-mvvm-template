@@ -24,6 +24,10 @@
 		031E0A94287250D400962CE5 /* SchoolListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E0A93287250D400962CE5 /* SchoolListViewController.swift */; };
 		031E0A972872518500962CE5 /* SchoolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E0A962872518500962CE5 /* SchoolCell.swift */; };
 		031E0A9A28725D8700962CE5 /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E0A9928725D8700962CE5 /* NSMutableAttributedString+Extension.swift */; };
+		036B1F1128739311007B10A8 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B1F1028739311007B10A8 /* CoordinatorProtocol.swift */; };
+		036B1F132873935A007B10A8 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B1F122873935A007B10A8 /* ApplicationCoordinator.swift */; };
+		036B1F15287395FB007B10A8 /* SchoolDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B1F14287395FB007B10A8 /* SchoolDetailCoordinator.swift */; };
+		036B1F1728739972007B10A8 /* SchoolListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B1F1628739972007B10A8 /* SchoolListCoordinator.swift */; };
 		03C21AA628729327001BC23E /* SchoolDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C21AA528729327001BC23E /* SchoolDetailViewController.swift */; };
 		03C21AA82872937D001BC23E /* SchoolDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C21AA72872937D001BC23E /* SchoolDetailViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +71,10 @@
 		031E0A93287250D400962CE5 /* SchoolListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListViewController.swift; sourceTree = "<group>"; };
 		031E0A962872518500962CE5 /* SchoolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCell.swift; sourceTree = "<group>"; };
 		031E0A9928725D8700962CE5 /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		036B1F1028739311007B10A8 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		036B1F122873935A007B10A8 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		036B1F14287395FB007B10A8 /* SchoolDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailCoordinator.swift; sourceTree = "<group>"; };
+		036B1F1628739972007B10A8 /* SchoolListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListCoordinator.swift; sourceTree = "<group>"; };
 		03C21AA528729327001BC23E /* SchoolDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailViewController.swift; sourceTree = "<group>"; };
 		03C21AA72872937D001BC23E /* SchoolDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +127,7 @@
 		031E0A532872463300962CE5 /* ios-mvvm-template */ = {
 			isa = PBXGroup;
 			children = (
+				036B1F0F287392FE007B10A8 /* Coordinator */,
 				031E0A9828725D7100962CE5 /* Extensions */,
 				031E0A952872510F00962CE5 /* ViewControllers */,
 				031E0A91287250B700962CE5 /* Views */,
@@ -211,6 +220,17 @@
 				031E0A9928725D8700962CE5 /* NSMutableAttributedString+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		036B1F0F287392FE007B10A8 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				036B1F1028739311007B10A8 /* CoordinatorProtocol.swift */,
+				036B1F122873935A007B10A8 /* ApplicationCoordinator.swift */,
+				036B1F1628739972007B10A8 /* SchoolListCoordinator.swift */,
+				036B1F14287395FB007B10A8 /* SchoolDetailCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		03C21AA428729317001BC23E /* SchoolDetail */ = {
@@ -352,17 +372,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				036B1F1128739311007B10A8 /* CoordinatorProtocol.swift in Sources */,
 				031E0A8828724A9000962CE5 /* SchoolDetail.swift in Sources */,
 				031E0A972872518500962CE5 /* SchoolCell.swift in Sources */,
 				031E0A94287250D400962CE5 /* SchoolListViewController.swift in Sources */,
 				031E0A592872463300962CE5 /* ViewController.swift in Sources */,
+				036B1F132873935A007B10A8 /* ApplicationCoordinator.swift in Sources */,
 				031E0A552872463300962CE5 /* AppDelegate.swift in Sources */,
+				036B1F15287395FB007B10A8 /* SchoolDetailCoordinator.swift in Sources */,
 				031E0A572872463300962CE5 /* SceneDelegate.swift in Sources */,
 				03C21AA82872937D001BC23E /* SchoolDetailViewModel.swift in Sources */,
 				03C21AA628729327001BC23E /* SchoolDetailViewController.swift in Sources */,
 				031E0A9A28725D8700962CE5 /* NSMutableAttributedString+Extension.swift in Sources */,
 				031E0A90287250AB00962CE5 /* SchoolViewModel.swift in Sources */,
 				031E0A8B28724AF800962CE5 /* SchoolAPIServiceProtocol.swift in Sources */,
+				036B1F1728739972007B10A8 /* SchoolListCoordinator.swift in Sources */,
 				031E0A8D28724BFF00962CE5 /* SchoolAPIService.swift in Sources */,
 				031E0A86287248AD00962CE5 /* School.swift in Sources */,
 			);
